@@ -2,4 +2,66 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+return {
+  {'echasnovski/mini.icons', opts={}}, 
+  
+  {
+    'echasnovski/mini.surround',
+    keys = function(_, keys)
+        -- Populate the keys based on the user's options
+        local plugin = require('lazy.core.config').spec.plugins['mini.surround']
+        local opts = require('lazy.core.plugin').values(plugin, 'opts', false)
+        local mappings = {{
+            opts.mappings.add,
+            desc = 'Add Surrounding',
+            mode = {'n', 'v'}
+        }, {
+            opts.mappings.delete,
+            desc = 'Delete Surrounding'
+        }, {
+            opts.mappings.find,
+            desc = 'Find Right Surrounding'
+        }, {
+            opts.mappings.find_left,
+            desc = 'Find Left Surrounding'
+        }, {
+            opts.mappings.highlight,
+            desc = 'Highlight Surrounding'
+        }, {
+            opts.mappings.replace,
+            desc = 'Replace Surrounding'
+        }, {
+            opts.mappings.update_n_lines,
+            desc = 'Update `MiniSurround.config.n_lines`'
+        }}
+        mappings = vim.tbl_filter(function(m)
+            return m[1] and #m[1] > 0
+        end, mappings)
+        return vim.list_extend(mappings, keys)
+    end,
+    opts = {
+        mappings = {
+            add = 'gsa', -- Add surrounding in Normal and Visual modes
+            delete = 'gsd', -- Delete surrounding
+            find = 'gsf', -- Find surrounding (to the right)
+            find_left = 'gsF', -- Find surrounding (to the left)
+            highlight = 'gsh', -- Highlight surrounding
+            replace = 'gsr', -- Replace surrounding
+            update_n_lines = 'gsn' -- Update `n_lines`
+        }
+    }
+  }, 
+
+  {
+    'sunjon/shade.nvim',
+    opts = {
+        overlay_opacity = 80,
+        opacity_step = 1,
+        keys = {
+            brightness_up = '<C-Up>',
+            brightness_down = '<C-Down>',
+            toggle = '<Leader>s'
+        }
+    }
+  }
+}
