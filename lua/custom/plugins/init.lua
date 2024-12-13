@@ -22,29 +22,55 @@ return {
   },
 
   {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+      animate = { enabled = true },
+      bigfile = { enabled = true },
+      dashboard = { enabled = true },
+      dim = { enabled = true },   
+      indent = { enabled = true },
+      input = { enabled = true },
+      notifier = { enabled = true },
+      quickfile = { enabled = true },
+      scope = { enabled = true },
+      scroll = { enabled = true },
+      statuscolumn = { enabled = true },
+      terminal = { enabled = true },
+      words = { enabled = true },
+      win = { enabled = true },
+      zen = { enabled = true },
+    },
+  },
+
+  {
     'echasnovski/mini.icons',
     opts = {},
   },
 
-  {
-    'sphamba/smear-cursor.nvim',
-    opts = {
-      cursor_color = '#ff8800',
-      stiffness = 0.4,
-      trailing_stiffness = 0.3,
-      trailing_exponent = 0.4,
-      gamma = 1,
-      volume_reduction_exponent = -0.1,
-      legacy_computing_symbols_support = true,
-      transparent_bg_fallback_color = '#303030',
-      -- distance_stop_animating = 0.8,
-      -- hide_target_hack = false,
-      smear_between_buffers = true,
-      smear_between_neighbor_lines = true,
-      vertical_bar_cursor = true,
-      color_levels = 24,
-    },
-  },
+  -- {
+  --   'sphamba/smear-cursor.nvim',
+  --   opts = {
+  --     cursor_color = '#ff8800',
+  --     stiffness = 0.4,
+  --     trailing_stiffness = 0.3,
+  --     trailing_exponent = 0.4,
+  --     gamma = 1,
+  --     volume_reduction_exponent = -0.1,
+  --     legacy_computing_symbols_support = true,
+  --     transparent_bg_fallback_color = '#303030',
+  --     -- distance_stop_animating = 0.8,
+  --     -- hide_target_hack = false,
+  --     smear_between_buffers = true,
+  --     smear_between_neighbor_lines = true,
+  --     vertical_bar_cursor = true,
+  --     color_levels = 24,
+  --   },
+  -- },
 
   {
     'echasnovski/mini.surround',
