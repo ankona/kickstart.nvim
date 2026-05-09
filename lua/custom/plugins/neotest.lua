@@ -1,0 +1,75 @@
+-- return {
+--     {
+--         'nvim-neotest/neotest-python',
+--         lazy = true,
+--         config = function()
+--             require 'neotest-python' {
+--                 dap = {justMyCode = false},
+--                 args = {'--log-level', 'DEBUG', '-s', '-vv'},
+--                 runner = 'pytest'
+--             }
+--         end,
+--         pytest_discover_instances = true
+--     }, {'nvim-neotest/neotest-plenary'}, {'nvim-neotest/neotest-vim-test'}, {
+--         'nvim-neotest/neotest',
+--         lazy = true,
+--         dependencies = {
+--             'nvim-neotest/nvim-nio', 'nvim-lua/plenary.nvim',
+--             'antoinemadec/FixCursorHold.nvim',
+--             'nvim-treesitter/nvim-treesitter', 'nvim-neotest/neotest-python'
+--         },
+--         keys = {
+--             {
+--                 '<leader>db',
+--                 function()
+--                     local neotest = require 'neotest'
+--                     neotest.run.run {strategy = 'integrated'}
+--                     neotest.output_panel.open()
+--                 end,
+--                 desc = 'Neotest: Run nearest test'
+--             }, {
+--                 '<leader>dp',
+--                 function()
+--                     local neotest = require 'neotest'
+--                     -- neotest.run.run { strategy = 'integrated' }
+--                     neotest.output_panel.toggle()
+--                 end,
+--                 desc = 'Neotest: Show output panel'
+--             }, {
+--                 '<leader>ds',
+--                 function()
+--                     require('neotest').run.run {strategy = 'dap'}
+--                 end,
+--                 desc = 'Neotest::Debug nearest test'
+--             }, {
+--                 '<leader>dq',
+--                 function() require('neotest').run.stop() end,
+--                 desc = 'Neotest::Stop running test'
+--             }, {
+--                 '<leader>dc',
+--                 function()
+--                     require('neotest').run.run(vim.fn.expand '%')
+--                 end,
+--                 desc = 'Neotest::Run current file'
+--             }
+--         },
+--         config = function()
+--             -- local neotest = require 'neotest'
+--             -- local neotest_plen = require 'neotest-plenary'
+--             -- local neotest_vim_test = require 'neotest-vim-test'
+--             require('neotest').setup {
+--                 adapters = {
+--                     require 'neotest-python', -- {
+--                     --  dap = { justMyCode = false },
+--                     --  args = { '--log-level', 'DEBUG', '-s', '-vv' },
+--                     --  runner = 'pytest',
+--                     -- },
+--                     require 'neotest-plenary',
+--                     require 'neotest-vim-test' {
+--                         ignore_file_types = {'python', 'vim', 'lua'}
+--                     }
+--                 }
+--             }
+--         end
+--     }
+-- }

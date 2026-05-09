@@ -1,0 +1,16 @@
+-- return {
+--     'MeanderingProgrammer/render-markdown.nvim',
+--     lazy = false,
+--     dependencies = {'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim'},
+--     ---@module 'render-markdown'
+--     ---@type render.md.UserConfig
+--     opts = {
+--         -- filetypes = { 'markdown' },
+--         -- Highlight the current line
+--         highlight_current_line = true
+--         -- Wrap lines that exceed the width of the window
+--         -- wrap = true,
+--         -- Use a custom theme for markdown rendering
+--         -- theme = 'dark',
+--     }
+-- }

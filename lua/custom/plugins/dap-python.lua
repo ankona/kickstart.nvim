@@ -1,0 +1,29 @@
+-- return
+--   {
+--     'mfussenegger/nvim-dap-python',
+--     lazy = true,
+--     dependencies = { 'mfussenegger/nvim-dap', 'rcarriga/nvim-dap-ui' },
+--     keys = {
+--       {
+--         '<leader>dn',
+--         function()
+--           require('dap-python').test_method()
+--         end,
+--         desc = 'Debug: Debug nearest test method',
+--       },
+--     },
+--     config = function()
+--       local dap_python = require 'dap-python'
+--       -- dap_python.setup(cstar_python_path)
+--       -- Ensure you: pip install debugpy
+--       -- If you use a non-standard installation or virtual environment, you can set the path to
+--       -- the python executable with the following command:
+--       dap_python.setup 'debugpy-adapter'
+--       dap_python.test_runner = 'pytest'
+--       dap_python.test_args = { '-s', '-vv' }
+--       --dap_python.resolve_python = function()
+--       -- Find the python executable in the current environment
+--       --  return /your/python/path/here
+--       --end
+--     end,
+--   }
