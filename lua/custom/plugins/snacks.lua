@@ -1,5 +1,7 @@
-return {
-    'folke/snacks.nvim',
+
+vim.pack.add { 'https://github.com/folke/snacks.nvim' }
+require('snacks').setup {
+    ---@type snacks.Config
     priority = 1000,
     lazy = false,
     opts = {

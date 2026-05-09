@@ -1,5 +1,2 @@
-
-vim.pack.add { 'https://github.com/echasnovski/mini.icons' }
-
-require('mini.icons').setup {
-}
+vim.pack.add { 'https://github.com/nvim-mini/mini.icons' }
+require('mini.icons').setup {}

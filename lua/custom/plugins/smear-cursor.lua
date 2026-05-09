@@ -1,6 +1,5 @@
-return {
-    'sphamba/smear-cursor.nvim',
-
+vim.pack.add { 'https://github.com/sphamba/smear-cursor.nvim' }
+require('smear-cursor').setup {
     opts = {
         -- Smear cursor when switching buffers or windows.
         smear_between_buffers = true,

@@ -1,5 +1,5 @@
-return {
-    'doums/rg.nvim',
+vim.pack.add { 'https://github.com/doums/rg.nvim' }
+require('rg').setup {
     cmd = {'Rg', 'Rgf', 'Rgp', 'Rgfp'},
     opts = {
         qf_format = nil,

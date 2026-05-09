@@ -1,5 +1,5 @@
-return {
-    'folke/noice.nvim',
+vim.pack.add { 'https://github.com/folke/noice.nvim' }
+require('noice').setup {
     event = 'VeryLazy',
     opts = {
         --     -- add any options here
@@ -8,7 +8,7 @@ return {
         popupmenu = {enabled = true},
         --     -- redirect = {enabled = false},
         --     -- commands = { enabled = true },
-        markdown = {enabled = true}
+        markdown = {enabled = false}
         --     notify = { enabled = true },
         --     --     lsp = {
         --     --       enabled = true,

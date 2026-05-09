@@ -1,12 +1,46 @@
-return {
-    {'folke/tokyonight.nvim'}, {'rebelot/kanagawa.nvim'}, {'catppuccin/nvim'},
-    -- { 'kepano/flexoki' },
-    {'ellisonleao/gruvbox.nvim'}, -- { 'RomanAverin/charleston.nvim' },
-    -- { 'jacoborus/tender.vim' },
-    {'marko-cerovac/material.nvim'}, {'navarasu/onedark.nvim'},
-    -- { 'sainnhe/everforest' },
-    {'morhetz/gruvbox'}, {'khoido2003/monokai-v2.nvim'},
-    -- { 'markchucarroll/mlavender' },
-    {'themosthigh/darcula.nvim'}, {'khoido2003/monokai-v2.nvim'},
-    {'adibhanna/forest-night.nvim'}, {'savq/melange-nvim'}
-}
+-- vim.pack.add({
+--   {
+--     src = 'https://github.com/folke/tokyonight.nvim',
+--     name = 'tokyonight',
+--   },
+--   {
+--     src = 'https://github.com/rebelot/kanagawa.nvim',
+--     name = 'kanagawa',
+--   },
+--   {
+--     src = 'https://github.com/catppuccin/nvim',
+--     name = 'catppuccin',
+--   },
+--   {
+--     src = 'https://github.com/ellisonleao/gruvbox.nvim',
+--     name = 'gruvbox',
+--   },
+--   {
+--     src = 'https://github.com/marko-cerovac/material.nvim',
+--     name = 'material',
+--   },
+--   {
+--     src = 'https://github.com/navarasu/onedark.nvim',
+--     name = 'onedark',
+--   },
+--   {
+--     src = 'https://github.com/morhetz/gruvbox',
+--     name = 'gruvbox',
+--   },
+--   {
+--     src = 'https://github.com/khoido2003/monokai-v2.nvim',
+--     name = 'monokai-v2',
+--   },
+--   {
+--     src = 'https://github.com/themosthigh/darcula.nvim',
+--     name = 'darcula',
+--   },
+--   {
+--     src = 'https://github.com/adibhanna/forest-night.nvim',
+--     name = 'forest-night',
+--   },
+--   {
+--     src = 'https://github.com/savq/melange-nvim',
+--     name = 'melange-nvim',
+--   },
+-- })
